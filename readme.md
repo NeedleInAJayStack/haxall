@@ -21,5 +21,21 @@ All the documentation is hosted on [haxall.io](https://haxall.io):
 - [Build](https://haxall.io/doc/docHaxall/Build): instructions to build from source
 - [Learn](https://haxall.io/doc/appendix/learn): quick links to learn more
 
+## Docker
+
+This repo contains a Dockerfile that can build Haxall docker images.
+
+To build, run:
+
+```bash
+docker build --tag haxall .
+```
+
+To run a built image, run:
+
+```bash
+docker run -p 8080:8080 -v ~/haxall/proj:/opt/haxall/proj -e "SU_PASS=changeme" haxall
+```
+
 # License
 Haxall is released under the [Academic Free License 3.0](https://opensource.org/licenses/AFL-3.0). 

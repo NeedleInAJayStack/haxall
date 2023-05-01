@@ -1,0 +1,10 @@
+#! /bin/bash
+
+set -eou pipefail
+
+if [ ! -d "proj/db" ]; then
+  su_user=${SU_USER:-su}
+  su_pass=${SU_PASS}
+  hx init -headless -suUser $su_user -suPass $su_pass proj
+fi;
+hx run proj
